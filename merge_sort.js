@@ -13,9 +13,7 @@ function mergeSort(array) {
 function merge(left, right) {
 	let combined = [];
 	let countLeft = left.length;
-
 	let countRight = right.length;
-
 	let leftIndex = rightIndex = 0;
 	while(leftIndex < countLeft && rightIndex < countRight) {
 		if(left[leftIndex] > right[rightIndex]) {
