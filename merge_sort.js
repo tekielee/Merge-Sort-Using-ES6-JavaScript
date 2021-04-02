@@ -1,6 +1,7 @@
 function mergeSort(array) {
 	let len = array.length;
 	let mid = len/2;
+
 	if(len === 1) {
 		return array;
 	}
@@ -12,7 +13,9 @@ function mergeSort(array) {
 function merge(left, right) {
 	let combined = [];
 	let countLeft = left.length;
+
 	let countRight = right.length;
+
 	let leftIndex = rightIndex = 0;
 	while(leftIndex < countLeft && rightIndex < countRight) {
 		if(left[leftIndex] > right[rightIndex]) {
@@ -34,6 +37,6 @@ function merge(left, right) {
 	return combined;
 }
 
-let array = [20, 45, 93, 67, 10, 97, 52, 88, 33, 92];
+let array = [20, 45, 93, 67, 10, 97, 52, 88];
 let sortedArray = mergeSort(array);
 console.log(sortedArray);	
