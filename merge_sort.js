@@ -1,13 +1,13 @@
-function mergeSort(Array) {
-	let len = Array.length;
+function mergeSort(array) {
+	let len = array.length;
 	let mid = Math.floor(len/2);
 	
 	if(len === 1) {
-		return Array;
+		return array;
 	}
 	
-	let left = mergeSort(Array.splice(0, mid))
-	let right = mergeSort(Array);
+	let left = mergeSort(array.splice(0, mid))
+	let right = mergeSort(array);
 	return merge(left, right);
 }
 
